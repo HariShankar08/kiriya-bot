@@ -83,6 +83,8 @@ async def manga_search(ctx, *args):
 
         await ctx.send('Shiori~n!')
         await ctx.send(embed=embed)
+    except IndexError:
+        await ctx.send('Yeah, no. That didn\'t work.')
     except discord.ext.commands.errors.CommandInvokeError:
         await ctx.send('Huh, that didn\'t work. I wonder why.')
 
